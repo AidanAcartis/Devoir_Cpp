@@ -1,0 +1,3 @@
+g++ -c Activation.cpp
+g++ -o main main.cpp Activation.o
+
