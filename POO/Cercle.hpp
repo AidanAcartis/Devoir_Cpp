@@ -3,7 +3,8 @@
 
 #include "Forme.hpp"
 
-class Cercle : public Forme {
+class Cercle : public Forme 
+{
 private:
     double rayon;
 public:

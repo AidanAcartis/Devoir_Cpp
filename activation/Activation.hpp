@@ -3,7 +3,8 @@
 
 #include <string>
 
-class Activation {
+class Activation 
+{
 public:
     Activation(const std::string& filename);
     bool verifActivation();

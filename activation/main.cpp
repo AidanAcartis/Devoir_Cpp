@@ -1,16 +1,21 @@
 #include <iostream>
 #include "Activation.hpp"
 
-int main() {
+int main() 
+{
     Activation activation("activation.txt");
 
-    if (activation.verifActivation()) {
+    if (activation.verifActivation()) 
+    {
         std::cout << "Programme activé avec succès. Utilisation illimitée." << std::endl;
-    } else {
-        if (activation.getPoints() > 0) {
+    } else 
+    {
+        if (activation.getPoints() > 0) 
+        {
             std::cout << "Programme en mode limité. Points restants: " << activation.getPoints() << std::endl;
             activation.decrementerPoints();
-        } else {
+        } else 
+        {
             std::cout << "Nombre de points épuisé. Veuillez activer le programme." << std::endl;
             return 1;
         }

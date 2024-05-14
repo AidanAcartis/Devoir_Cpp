@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-class Forme {
+class Forme 
+{
 public:
     virtual ~Forme() = default;
     virtual double aire() const = 0;

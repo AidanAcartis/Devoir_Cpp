@@ -3,7 +3,8 @@
 
 #include "Forme.hpp"
 
-class Triangle : public Forme {
+class Triangle : public Forme 
+{
 private:
     double cote1, cote2, cote3;
 public:

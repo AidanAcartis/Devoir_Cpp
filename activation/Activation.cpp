@@ -2,16 +2,20 @@
 #include <fstream>
 #include <iostream>
 
-Activation::Activation(const std::string& filename) : fichierActivation(filename), points(10) {
-    if (!verifActivation()) {
+Activation::Activation(const std::string& filename) : fichierActivation(filename), points(10) 
+{
+    if (!verifActivation()) 
+    {
         lireFichierActivation();
     }
 }
 
-bool Activation::verifActivation() {
+bool Activation::verifActivation() 
+{
     std::ifstream file(fichierActivation);
     std::string ligne;
-    if (file.is_open()) {
+    if (file.is_open()) 
+    {
         std::getline(file, ligne);
         file.close();
         return ligne == "ACTIVATION_VALIDE";
@@ -19,20 +23,25 @@ bool Activation::verifActivation() {
     return false;
 }
 
-void Activation::decrementerPoints() {
-    if (points > 0) {
+void Activation::decrementerPoints() 
+{
+    if (points > 0) 
+    {
         points--;
         sauverPoints();
     }
 }
 
-int Activation::getPoints() const {
+int Activation::getPoints() const 
+{
     return points;
 }
 
-bool Activation::lireFichierActivation() {
+bool Activation::lireFichierActivation() 
+{
     std::ifstream file("points.txt");
-    if (file.is_open()) {
+    if (file.is_open()) 
+    {
         file >> points;
         file.close();
         return true;
@@ -40,9 +49,11 @@ bool Activation::lireFichierActivation() {
     return false;
 }
 
-void Activation::sauverPoints() const {
+void Activation::sauverPoints() const 
+{
     std::ofstream file("points.txt");
-    if (file.is_open()) {
+    if (file.is_open()) 
+    {
         file << points;
         file.close();
     }

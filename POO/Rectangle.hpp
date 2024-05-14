@@ -3,7 +3,8 @@
 
 #include "Forme.hpp"
 
-class Rectangle : public Forme {
+class Rectangle : public Forme 
+{
 private:
     double largeur;
     double hauteur;

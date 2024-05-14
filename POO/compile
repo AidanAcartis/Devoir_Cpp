@@ -1,4 +1,0 @@
-g++ -c Forme.cpp Cercle.cpp Rectangle.cpp Triangle.cpp
-g++ -o main main.cpp Forme.o Cercle.o Rectangle.o Triangle.o
-./main
-
